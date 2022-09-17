@@ -1,0 +1,28 @@
+.Menulist{
+  overflow-y: scroll;
+  height: 34em;
+  width: 96%;
+  margin-left:1.3%;
+  border: 0.1em solid black;
+  border-radius: 0.8em;
+  padding: 0.5em;
+}
+.Menulist ul{
+  display: grid;
+  grid-template-columns: 1fr 2fr 5fr 8fr;
+  padding-bottom: 0.2em;
+  border-bottom: 0.07em solid black;
+}
+.Addbutton {
+  background-color: white;
+  width:3.4em;
+  height:3.4em;
+  border-radius:1.7em;
+  border: 0.2em solid black;
+  position: absolute;
+  bottom:4em;
+  right:2.5em;
+}
+.Addbutton span{
+  font-size:2.3em;
+}
