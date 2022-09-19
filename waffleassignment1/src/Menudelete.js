@@ -26,8 +26,8 @@ const Menudelete = ({deleteMenu, menuList, whattodelete, setwhattodelete} ) => {
         <h3>메뉴삭제</h3>
         <span>정말로 삭제하시겠습니까?</span>
         <div className = "Twobuttons">
-          <button onClick = {DeleteFinal}>삭제</button>
-          <button onclick= {() => {setdeleteState(deleteState => !deleteState);setwhattodelete({});}}>취소</button>
+          <button onClick = {DeleteFinal} style = {{'background-color': '#FF9999'}}>삭제</button>
+          <button onClick= {() => {setdeleteState(deleteState => !deleteState);setwhattodelete({});}}>취소</button>
         </div>
       </div>
     </div>}

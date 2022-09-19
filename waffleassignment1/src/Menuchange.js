@@ -79,9 +79,9 @@ const Menuchange = ({changeMenu, whattochange, setwhattochange} ) => {
         <ul><span>가격</span><input type = "text"  value = {price} onChange = {(e) => setprice(priceFormat(e.target.value))} /><div className = "Pricewon">원</div></ul>
         <ul><span>상품 이미지</span><input type = "text"  value = {image} onChange = {(e) => setimage(e.target.value)}/></ul>
         <div className = "Twobuttons">
-          <button onClick = {CheckChange}>저장</button>
+          <button onClick = {CheckChange} style = {{'background-color': '#B2FF66'}}>저장</button>
           <button onClick = {() => {setname("");setprice("");
-          setimage("");setchangeState(changeState => !changeState);}}>취소</button>
+          setimage("");setchangeState(changeState => !changeState);setwhattochange({});}}>취소</button>
         </div>
       </div>
     </div>}

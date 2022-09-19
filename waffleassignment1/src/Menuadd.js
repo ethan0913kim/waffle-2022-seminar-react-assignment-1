@@ -81,7 +81,7 @@ const Menuadd = ({addMenu, menuList, detailed} ) => {
     <div>
     {addState&&
     <div>
-    <button className = "ModalBg" onClick = {() => {setname("");setprice("");
+    <button className = "ModalBg"  onClick = {() => {setname("");setprice("");
     setimage("");setaddState(addState => !addState);}}>{/*어두운 배경, 클릭하면 모달창 닫히게 addState 변경 */}
     </button>
       <div className = "Addmodal">{/*모달창 */}
@@ -90,7 +90,7 @@ const Menuadd = ({addMenu, menuList, detailed} ) => {
         <ul><span>가격</span><input type = "text" placeholder = "5,000" value = {price} onChange = {(e) => setprice(priceFormat(e.target.value))} /><div className = "Pricewon">원</div></ul>
         <ul><span>상품 이미지</span><input type = "text" placeholder = "https://foo.bar/baz.png" value = {image} onChange = {(e) => setimage(e.target.value)}/></ul>
         <div className = "Twobuttons">{/*추가, 취소 버튼 누르면 CheckAdd 함수로 추가 로직 실행, addState 바꾸는 로직 실행 */}
-          <button onClick = {CheckAdd}>추가</button>
+          <button onClick = {CheckAdd} style = {{'background-color': '#B2FF66'}}>추가</button>
           <button onClick  = {() => {setname("");setprice("");
           setimage("");setaddState(addState => !addState);}}>취소</button>
         </div>
