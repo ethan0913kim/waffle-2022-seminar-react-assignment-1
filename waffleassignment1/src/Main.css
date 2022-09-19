@@ -29,6 +29,8 @@
 }
 .Main-search button{
   height:2.3em;
+  background-color: white;
+  border: solid black 0.05em;
 
 
 }

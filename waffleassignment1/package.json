@@ -12,11 +12,13 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+   "start": "react-scripts start",
+   "build": "GENERATE_SOURCEMAP=false react-scripts build",
+   "test": "react-scripts test --env=jsdom",
+   "eject": "react-scripts eject",
+   "deploy": "aws s3 sync ./build s3://waffleassignment1 --profile=ethan0913",
+   "invalidate": "aws cloudfront create-invalidation --profile=ethan0913 --distribution-id E2FSX0H1N0HK6S --paths / /index.html /error.html /service-worker.js /manifest.json /favicon.ico"
+ },
   "eslintConfig": {
     "extends": [
       "react-app",

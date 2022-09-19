@@ -1,4 +1,4 @@
-.Addmodal {
+.Changemodal {
   position: absolute;
   top:35%;
   left:37%;
@@ -13,12 +13,12 @@
   overflow: hidden;
 
 }
-.Addmodal h3{
+.Changemodal h3{
   text-align: left;
   padding-left:1.5em;
-  font-size:1.2em;
+  font-size:1.2Change
 }
-.Addmodal ul{
+.Changemodal ul{
   margin:0.5em;
   padding-left:0;
   display: grid;
@@ -27,7 +27,7 @@
   height: 1.3em;
   border: none;
 }
-.Addmodal span{
+.Changemodal span{
   font-size:1em;
   color: black;
   font-weight: bold;
@@ -45,7 +45,7 @@
   left:70%;
 
 }
-.Addbutton {
+.Changebutton {
   background-color: white;
   width:3.4em;
   height:3.4em;
