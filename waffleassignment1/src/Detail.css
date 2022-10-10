@@ -1,0 +1,56 @@
+.Detail {
+  overflow-y: scroll;
+  position:absolute;
+  top:15%;
+  right:1.3%;
+
+  height: 37.5em;
+  width: 37%;
+  border: 0.1em solid black;
+  border-radius: 0.8em;
+  padding: 0.5em;
+  float:right;
+
+}
+.Close{
+  border:none;
+  background-color: white;
+  font-size:2em;
+  float:right;
+  color: gray;
+}
+.Imagewrapper{
+  position: absolute;
+  top:25%;
+  left:33%;
+  width: 13em;
+  height: 13em;
+}
+.Menuimage{
+  border-radius:2em;
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height:100%;
+}
+.Text {
+  position:absolute;
+  top:61%;
+  left:43%;
+  text-align: center;
+
+}
+.Text span{
+  font-size:1.3em;
+  font-weight: bold;
+}
+.Buttons{
+  position: absolute;
+  top:75%;
+  left:44%;
+}
+.Buttons img{
+  width: 1.7em;
+  margin:0.4em;
+}

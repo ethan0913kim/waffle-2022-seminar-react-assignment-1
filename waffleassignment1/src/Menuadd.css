@@ -1,0 +1,89 @@
+.Addmodal {
+  position: absolute;
+  top:35%;
+  left:37%;
+  height: 13em;
+  width: 24em;
+  background-color:  white;
+  border: 0.1em solid black;
+  border-radius: 0.8em;
+  padding: 0.5em;
+  z-index: 2;
+  animation: modal-show 0.5s;
+  overflow: hidden;
+
+}
+.Addmodal h3{
+  text-align: left;
+  padding-left:1.5em;
+  font-size:1.2em;
+}
+.Addmodal ul{
+  margin:0.5em;
+  padding-left:0;
+  display: grid;
+  grid-template-columns:  1.3fr 2fr 1fr;
+  padding-bottom:0.1em;
+  height: 1.3em;
+  border: none;
+}
+.Addmodal span{
+  font-size:1em;
+  color: black;
+  font-weight: bold;
+}
+.Twobuttons {
+  position: absolute;
+  left:60%;
+  bottom:10%;
+}
+.Twobuttons button{
+  margin:0.3em;
+}
+.Pricewon {
+  position: absolute;
+  left:70%;
+
+}
+.Addbutton {
+  background-color: white;
+  width:3.4em;
+  height:3.4em;
+  border-radius:1.7em;
+  border: 0.2em solid black;
+  position: absolute;
+  bottom:4em;
+  right:2.5em;
+  z-index: 0.5;
+}
+
+.ModalBg {
+  animation: modalbg-show 0.5s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.50);
+  z-index: 1;
+}
+/* 검은 배경 및 모달 천천히 나타나는 애니메이션 설정 */
+@keyframes modal-show {
+  from {
+    opacity: 0;
+    margin-top: -10px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+@keyframes modalbg-show {
+  from {
+    opacity: 0;
+
+  }
+  to {
+    opacity: 1;
+  }
+}
