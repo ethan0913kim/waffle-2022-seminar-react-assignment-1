@@ -65,9 +65,9 @@ function Main() {
   }
   const deleteMenu = (id) => {
    setmenuList(
-     menuList.filter( (menuList) => {
-       return menuList.id !== id;
-     })
+     menuList.filter( (menuList) =>
+       (menuList.id !== id)
+     )
    );
  };
  //검색창 기능 관련 state와 함수
@@ -78,7 +78,7 @@ function Main() {
   //검색창에 쓴 단어를 포함하는 메뉴만 filtered로 배열 형태로 저장
   const filtered = menuList.filter((val) =>{
       if (val.name.includes(search)){
-        return val;
+        return true;
       }
     }
     );
@@ -102,7 +102,7 @@ function Main() {
       <Menuadd addMenu = {addMenu} menuList = {menuList} detailed = {detailed} />
       {/*수정 모달: whattochange가 존재할떄, 즉 수정할 정보를 하위 컴포넌트인 Detail에서 받아왔을때만 나타남 */}
       {whattochange.id>0&&<Menuchange changeMenu = {changeMenu} whattochange = {whattochange}
-      setwhattochange = {setwhattochange} />}
+      setwhattochange = {setwhattochange} menuList = {menuList}/>}
       {/*삭제 모달: whattodelete가 존재할떄, 즉 삭제할 정보를 하위 컴포넌트인 Detail에서 받아왔을때만 나타남 */}
       {whattodelete.id>0&&<Menudelete deleteMenu = {deleteMenu} whattodelete = {whattodelete}
        setwhattodelete = {setwhattodelete} />}

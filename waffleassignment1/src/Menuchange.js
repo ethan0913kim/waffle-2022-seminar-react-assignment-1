@@ -4,7 +4,7 @@ import './Menuchange.css';
 
 //전체적인 구성은 Menuadd와 비슷
 
-const Menuchange = ({changeMenu, whattochange, setwhattochange} ) => {
+const Menuchange = ({changeMenu, whattochange, setwhattochange, menuList} ) => {
   const [name, setname] = useState(whattochange.name);
   const [image, setimage] = useState(whattochange.image);
   const [price, setprice] = useState(whattochange.price);
@@ -20,10 +20,9 @@ const Menuchange = ({changeMenu, whattochange, setwhattochange} ) => {
     return comma(uncomma(str));
 
   }
-  const [changeState, setchangeState] = useState(true);
   //입력이 형식에 맞는지 확인
   const CheckChange = () => {
-    if (CheckChange_name()&&CheckChange_price()){
+    if (CheckChange_name()&&CheckChange_price()&&CheckChange_same()){
       ChangeFinal();
       return;
     }
@@ -50,6 +49,16 @@ const Menuchange = ({changeMenu, whattochange, setwhattochange} ) => {
     return false;}
   }
 
+  const CheckChange_same = () => {
+    for (let i = 0;i<menuList.length;i++){
+      if (name == menuList[i].name){
+        alert('이미 존재하는 메뉴입니다!');
+        return false;
+      }
+    }
+    return true;
+
+  }
 //체크 후 최종적으로 changeMenu(main.js의 함수)로 추가하고 입력 초기화
   const ChangeFinal = () => {
     changeMenu({
@@ -61,16 +70,13 @@ const Menuchange = ({changeMenu, whattochange, setwhattochange} ) => {
     setname("");
     setprice("");
     setimage("");
-    setchangeState(changeState => !changeState);
     setwhattochange({});
   }
 
   return(
     <div>
-    {changeState&&
-    <div>
     <button className = "ModalBg" onClick = {() => {setname("");setprice("");
-    setimage("");setchangeState(changeState => !changeState);setwhattochange({})}}>
+    setimage("");setwhattochange({})}}>
     </button>
 
       <div className = "Changemodal">
@@ -81,10 +87,9 @@ const Menuchange = ({changeMenu, whattochange, setwhattochange} ) => {
         <div className = "Twobuttons">
           <button onClick = {CheckChange} style = {{'background-color': '#B2FF66'}}>저장</button>
           <button onClick = {() => {setname("");setprice("");
-          setimage("");setchangeState(changeState => !changeState);setwhattochange({});}}>취소</button>
+          setimage("");setwhattochange({});}}>취소</button>
         </div>
       </div>
-    </div>}
     </div>
   );
 }

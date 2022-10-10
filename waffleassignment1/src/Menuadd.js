@@ -28,10 +28,6 @@ const Menuadd = ({addMenu, menuList, detailed} ) => {
   const CheckAdd = () => {
     if (CheckAdd_name()&&CheckAdd_price()&&CheckAdd_same()){
       AddFinal();
-      return;
-    }
-    else{
-      return;
     }
 
   };
